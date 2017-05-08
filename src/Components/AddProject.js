@@ -22,7 +22,7 @@ class AddProject extends Component {
                 category: this.refs.category.value
             }}, function(){
                 //console.log(this.state);
-                this.prop.addProject(newProject);
+                this.props.addProject(this.state.newProject);
             });
         }
         e.preventDefault();
@@ -30,7 +30,7 @@ class AddProject extends Component {
 
   render() {
       let categoryOptions = this.props.categories.map(category => {
-          return <option key={category} value="category">{category}</option>
+          return <option key={category} value={category}>{category}</option>
       });
     return (
       <div >
