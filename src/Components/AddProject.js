@@ -2,12 +2,19 @@ import React, { Component } from 'react';
 
 
 class AddProject extends Component {
+    constructor(){
+        super();
+        this.state = {
+            newProject:{}
+        }
+    }
+
     static defaultProps = {
         categories: ['EV', 'Tuner', 'Exotic', 'Ricer']
     }
 
     handleSubmit(e){
-        console.log('Submitted Form');
+        console.log(this.refs.title.value);
         e.preventDefault();
     }
 
